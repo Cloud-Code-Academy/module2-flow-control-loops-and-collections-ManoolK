@@ -96,7 +96,10 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Even" or "Odd", or null if the number is null.
      */
     public static String checkEvenOdd(Integer a) {
-        return null; // Replace null with the variable you used to store the result
+        if (a == null) {
+            return null;
+        }
+        return Math.mod(a, 2) == 0 ? 'Even' : 'Odd';
     }
 
     /**
@@ -107,7 +110,12 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the input is "Empty", "Null", or "Contains Text".
      */
     public static String checkString(String a) {
-        return null; // Replace null with the variable you used to store the result
+        if (String.isNotEmpty(a)) {
+            return 'Contains Text';
+        } else if (a == null) {
+            return 'Null';
+        }
+        return 'Empty';
     }
 
     /**
