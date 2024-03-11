@@ -29,7 +29,10 @@ public with sharing class FlowControlLoopsCollections {
      * @return "Hello World!" if x greater than y, otherwise return null.
      */
     public static String helloWorld(Integer x, Integer y) {
-        return null; // Replace null with the variable you used to store the result
+        if (x == null || y == null || x <= y) {
+            return null;
+        }
+        return 'Hello World!';
     }
 
     /**
@@ -42,7 +45,7 @@ public with sharing class FlowControlLoopsCollections {
      * @return true if the person is eligible to vote, false otherwise.
      */
     public static Boolean votingEligibility(Integer age) {
-        return null; // Replace null with the variable you used to store the result
+        return age >= 18;
     }
 
     /**
