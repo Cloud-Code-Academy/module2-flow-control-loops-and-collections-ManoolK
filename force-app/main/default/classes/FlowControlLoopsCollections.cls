@@ -263,10 +263,9 @@ public with sharing class FlowControlLoopsCollections {
     public static Set<String> createStringSet(List<String> inputList) {
         // Create a new Set of strings
         Set<String> stringSet = new Set<String>();
-
         //add strings to the set
-
-        return null; // Replace null with the variable you used to store the result
+        stringSet.addAll(inputList);
+        return stringSet;
     }
 
     /**
@@ -277,12 +276,16 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer sumPositiveIntegers() {
         List<Integer> numbers = new List<Integer>{-1, 2, -3, 4, -5, 6}; //DO NOT CHANGE
-
+        Integer sum = 0;
         // Loop through the list of integers
+        for (Integer num : numbers) {
             // if the number is negative skip this iteration
-        
-
-        return null; // Replace null with the variable you used to store the result
+            if (num < 0) {
+                continue;
+            }
+            sum += num;
+        }
+        return sum;
     }
 
     /**
