@@ -154,12 +154,29 @@ public with sharing class FlowControlLoopsCollections {
      * @param intLimit The number up to which integers will be summed.
      * @return The sum of all integers up to the limit.
      */
+    // public static Integer sumUpToLimit(Integer intLimit) {
+    //     Integer sum = 0;
+    //     for (Integer i = 1; i <= intLimit; i++){
+    //         sum += i;
+    //     }
+    //     return sum;
+    // }
+
+    /**
+     * Question 8.2 (with recursion)
+     * Sum all the integers up to a given limit.
+     * Example: sumUpToLimit(5) should return 15
+     * @param intLimit The number up to which integers will be summed.
+     * @return The sum of all integers up to the limit.
+     */
     public static Integer sumUpToLimit(Integer intLimit) {
-        Integer sum = 0;
-        for (Integer i = 1; i <= intLimit; i++){
-            sum += i;
+        if (intLimit <= 0) {
+            return 0;
+        } 
+        if (intLimit == 1) {
+            return intLimit;
         }
-        return sum;
+        return intLimit + sumUpToLimit(intLimit - 1);
     }
 
     /**
