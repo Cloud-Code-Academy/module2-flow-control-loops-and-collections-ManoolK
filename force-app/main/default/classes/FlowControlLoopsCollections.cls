@@ -173,9 +173,6 @@ public with sharing class FlowControlLoopsCollections {
         if (intLimit <= 0) {
             return 0;
         } 
-        if (intLimit == 1) {
-            return intLimit;
-        }
         return intLimit + sumUpToLimit(intLimit - 1);
     }
 
